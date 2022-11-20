@@ -223,74 +223,84 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   width: 20,
                 ),
-                ElevatedButton(
-                  onPressed: () {
+                InkWell(
+                  onTap: () {
                     stop();
                     work = "Break!";
                     start = 0;
                     pomotime = ["00", "00"];
                     setState(() {});
                   },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black.withOpacity(0.6),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "Reset",
+                        style: GoogleFonts.inter(),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: SizedBox(
+        height: 50,
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      "Goals Achieved:",
+                      style: GoogleFonts.inter(),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: Center(
+                        child: Text(
+                          score.toString(),
+                          style: GoogleFonts.inter(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AboutMe()));
+                  },
                   child: Text(
-                    "Reset",
+                    "About Me!",
                     style: GoogleFonts.inter(),
                   ),
                 ),
               ],
             ),
-            SizedBox(
-                height: 50,
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              "Goals Achieved:",
-                              style: GoogleFonts.inter(),
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 20,
-                              height: 20,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  score.toString(),
-                                  style: GoogleFonts.inter(
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const AboutMe()));
-                          },
-                          child: Text(
-                            "About Me!",
-                            style: GoogleFonts.inter(),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                )),
-          ],
+          ),
         ),
       ),
     );
