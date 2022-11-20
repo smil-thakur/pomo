@@ -1,6 +1,6 @@
 # pomo
 
-<h1> Pomo is a Windows App made using Flutter to follow Pomodoro focus methods</h2>
+<h1>Pomo is a Windows App made using Flutter to follow Pomodoro focus methods</h2>
 
 <h3>Pomo can do following things</h3>
 <ul>
@@ -40,4 +40,4 @@ And yes it follows the new windows mica and transparency theme, yayyyy!
 
 <img src="https://user-images.githubusercontent.com/75114432/202915308-a36909ad-bec9-42c5-a30a-0a8b179e0d26.png"/>
 
-<h1> Download the release package extract it and open the pomo.exe to use the app </h1>
+<h1>Download the release package extract it and open the pomo.exe to use the app </h1>
